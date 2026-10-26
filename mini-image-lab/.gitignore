@@ -1,0 +1,23 @@
+# Python虚拟环境
+.venv/
+
+# Python缓存文件
+__pycache__/
+*.pyc
+
+# VS Code个人配置
+.vscode/
+
+# 测试缓存
+.pytest_cache/
+
+# 本地环境变量配置
+.env
+
+# 原始数据
+data/raw/*
+!data/raw/.gitkeep
+
+# 程序运行结果
+outputs/*
+!outputs/.gitkeep
