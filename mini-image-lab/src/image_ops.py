@@ -15,3 +15,8 @@ def average_brightness(image: Image.Image) -> float:
     pixels = np.array(gray_image, dtype=np.float32)  # 转换为NumPy数组
     mean_value = pixels.mean()  # 计算平均值
     return float(mean_value)  # 返回平均亮度值
+
+
+def resize_image(image: Image.Image, size: tuple[int, int]) -> Image.Image:
+    """调整图像尺寸"""
+    return image.resize(size, Image.Resampling.LANCZOS)

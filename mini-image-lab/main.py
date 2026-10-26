@@ -4,7 +4,7 @@ from pathlib import Path
 
 from PIL import Image
 from src.file_utils import list_images
-from src.image_ops import average_brightness, to_grayscale
+from src.image_ops import average_brightness, resize_image, to_grayscale
 from src.report import save_report
 
 # 当前项目的根目录
@@ -43,7 +43,7 @@ def main() -> None:
 
                 # 转换成灰度图
                 gray_image = to_grayscale(image)
-
+                resize_image(image, (128, 128))
                 # 计算平均亮度
                 brightness = average_brightness(gray_image)
 
